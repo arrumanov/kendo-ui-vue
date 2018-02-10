@@ -10,7 +10,7 @@
         ref="datasource"
         :type="'odata'"
         :pageSize="20"
-        :transportRead="'https://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers'"
+        :transportRead="'https://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders'"
       ></kendo-datasource>
       <kendo-grid
         :height="550"
@@ -21,22 +21,33 @@
         :pageable-page-sizes='true'
         :pageable-button-count='5'>
       <kendo-grid-column
-        field="ContactName"
-        title="Contact name"
+        field="OrderID"
+        title="Order-id"
         :width="250">
       </kendo-grid-column>
       <kendo-grid-column
-        field="ContactTitle"
-        title="Contact title">
+        field="OrderDate"
+        title="Order date">
       </kendo-grid-column>
       <kendo-grid-column
-        field="CompanyName"
-        title="Company name">
+        field="Freight"
+        title="Freight">
       </kendo-grid-column>
       <kendo-grid-column
-        field="County"
-        title="County"
-        :width="150">
+        field="ShipCity"
+        title="Ship city">
+      </kendo-grid-column>
+      <kendo-grid-column
+        field="ShipRegion"
+        title="Ship region">
+      </kendo-grid-column>
+      <kendo-grid-column
+        field="ShipPostalCode"
+        title="Ship postal code">
+      </kendo-grid-column>
+      <kendo-grid-column
+        field="ShipCountry"
+        title="Ship country">
       </kendo-grid-column>
       </kendo-grid>
     </div>
